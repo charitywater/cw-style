@@ -66,6 +66,12 @@ Rails/Output:
 RSpec/Focused:
   Enabled: true
 
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
 Metrics/CyclomaticComplexity:
   Enabled: false
 
@@ -73,6 +79,9 @@ Metrics/PerceivedComplexity:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
   Enabled: false
 
 Style/TrailingCommaInLiteral:
