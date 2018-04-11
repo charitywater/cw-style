@@ -13,52 +13,38 @@ Bundler/OrderedGems:
   Exclude:
     - "Gemfile"
 
-BracesAroundHashParameters:
-  Enabled: false
-
-CaseIndentation:
-  Enabled: false
-
-ClassLength:
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
 Metrics/AbcSize:
   Enabled: false
 
-Style/GuardClause:
-  Exclude:
-    - "spec/**/*"
-
-RescueModifier:
-  Exclude:
-    - "spec/**/*"
-
-Style/RegexpLiteral:
+Metrics/BlockLength:
   Enabled: false
 
-Style/Documentation:
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
 
 Metrics/ParameterLists:
   CountKeywordArgs: false
 
-Metrics/MethodLength:
+Metrics/PerceivedComplexity:
   Enabled: false
 
 Metrics/LineLength:
   Enabled: false
 
-Style/MethodDefParentheses:
-  Enabled: false
-
-Style/SignalException:
-  Enabled: false
-
 Rails:
   Enabled: true
 
-Rails/TimeZone:
-  EnforcedStyle: 'flexible'
+Rails/ApplicationRecord:
+  Enabled: true
 
 Rails/Date:
   EnforcedStyle: 'flexible'
@@ -67,32 +53,47 @@ Rails/Output:
   Exclude:
     - "lib/tasks/*"
 
+Rails/TimeZone:
+  EnforcedStyle: 'flexible'
+
 RSpec/Focused:
   Enabled: true
 
-Layout/MultilineMethodCallBraceLayout:
+Style/BracesAroundHashParameters:
   Enabled: false
 
-Metrics/BlockLength:
+Style/CaseIndentation:
   Enabled: false
 
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/PerceivedComplexity:
+Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/GuardClause:
+  Exclude:
+    - "spec/**/*"
+
+Style/MethodDefParentheses:
+  Enabled: false
+
 Style/PercentLiteralDelimiters:
   Enabled: false
 
-Style/TrailingCommaInLiteral:
-  EnforcedStyleForMultiline: 'comma'
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/RescueModifier:
+  Exclude:
+    - "spec/**/*"
+
+Style/SignalException:
+  Enabled: false
 
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: 'comma'
 
-Rails/ApplicationRecord:
-  Enabled: true
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: 'comma'
+
