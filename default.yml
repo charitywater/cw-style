@@ -9,6 +9,10 @@ AllCops:
   Exclude:
     - '*.gemspec'
 
+Bundler/OrderedGems:
+  Exclude:
+    - "Gemfile"
+
 BracesAroundHashParameters:
   Enabled: false
 
