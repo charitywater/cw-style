@@ -13,6 +13,9 @@ Bundler/OrderedGems:
   Exclude:
     - "Gemfile"
 
+Layout/CaseIndentation:
+  Enabled: false
+
 Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
@@ -60,9 +63,6 @@ RSpec/Focused:
   Enabled: true
 
 Style/BracesAroundHashParameters:
-  Enabled: false
-
-Style/CaseIndentation:
   Enabled: false
 
 Style/Documentation:
