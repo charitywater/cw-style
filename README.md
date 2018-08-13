@@ -47,11 +47,4 @@ You do not need to include rubocop directly in your application's dependencies. 
   - Manually bump the version number in [version.rb](https://github.com/charitywater/cw-style/blob/master/lib/charity_water/style/version.rb)
 - The gemfury-hosted gem is automatically updated when changes to this repo are merged.
 - Apps that include this gem as a dependency need to be updated to use the latest version of the gem.
-  - When making changes to this repo, be sure to update the gem version in all apps that use this gem by running `bundle update cw-style` and commiting the Gemfile.lock changes.
-  
-Apps that use this gem:
-- [maji](https://github.com/charitywater/maji/blob/master/Gemfile)
-- [cw-picha](https://github.com/charitywater/cw-picha/blob/master/Gemfile)
-- [stripe_netsuite_sync](https://github.com/charitywater/stripe_netsuite_sync/blob/master/Gemfile)
-- [dispatch](https://github.com/charitywater/dispatch/blob/master/Gemfile)
-- [crm_sync](https://github.com/charitywater/crm_sync/blob/master/Gemfile)
+  - When making changes to this repo, be sure to update the gem version in [all apps that use this gem](https://github.com/search?utf8=%E2%9C%93&q=org%3Acharitywater+%22cw-style%22+extension%3Alock&type=Code&ref=advsearch&l=&l=) by running `bundle update cw-style` and commiting the Gemfile.lock changes.
