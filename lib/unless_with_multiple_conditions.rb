@@ -7,7 +7,7 @@ module RuboCop
         def on_if(node)
           @node = node
           return unless unless_with_multiple_conditions?
-          add_offense(node, :expression)
+          add_offense(node)
         end
 
         private

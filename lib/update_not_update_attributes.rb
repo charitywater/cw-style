@@ -6,7 +6,7 @@ module RuboCop
 
         def on_send(node)
           return unless update_attributes_or_update_attributes_bang?(node)
-          add_offense(node, :selector)
+          add_offense(node)
         end
 
         private
