@@ -9,17 +9,17 @@ module RuboCop
           add_offense(node)
         end
 
-        private
-
-        def update_attributes_or_update_attributes_bang?(node)
-          node.method?(:update_attributes) || node.method?(:update_attributes!)
-        end
-
         def autocorrect(node)
           lambda do |corrector|
             corrector.replace(node.loc.selector, replacement_method(node))
           end
         end
+
+        private
+
+        def update_attributes_or_update_attributes_bang?(node)
+          node.method?(:update_attributes) || node.method?(:update_attributes!)
+        end        
 
         def message(node)
           format(MSG, replacement_method(node))
