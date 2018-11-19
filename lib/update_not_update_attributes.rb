@@ -6,13 +6,7 @@ module RuboCop
 
         def on_send(node)
           return unless update_attributes_or_update_attributes_bang?(node)
-          add_offense(node, :selector)
-        end
-
-        private
-
-        def update_attributes_or_update_attributes_bang?(node)
-          node.method?(:update_attributes) || node.method?(:update_attributes!)
+          add_offense(node)
         end
 
         def autocorrect(node)
@@ -20,6 +14,12 @@ module RuboCop
             corrector.replace(node.loc.selector, replacement_method(node))
           end
         end
+
+        private
+
+        def update_attributes_or_update_attributes_bang?(node)
+          node.method?(:update_attributes) || node.method?(:update_attributes!)
+        end        
 
         def message(node)
           format(MSG, replacement_method(node))

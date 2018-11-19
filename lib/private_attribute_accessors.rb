@@ -11,7 +11,7 @@ module RuboCop
           return if attrs.empty?
 
           attrs.each do |attr|
-            add_offense(attr, :expression)
+            add_offense(attr)
           end
         end
 
