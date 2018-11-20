@@ -57,6 +57,25 @@ describe RuboCop::Cop::Style::PrivateAttributeAccessors do
               'Do not use private attribute accessors'])
   end
 
+  it 'can handle non-access modifier node types' do
+    inspect_source cop, <<-RUBY.strip_indent
+        class AwesomeController < RighteousController
+          def create
+            case variable_name
+            when 'something'
+              OtherClass::WorkerClass.perform_async argument
+            when 'something else'
+              OtherClass::WorkerClass.perform_async argument
+            end
+
+            head :ok
+          end
+        end
+    RUBY
+
+    expect(cop.offenses.size).to eq(0)
+  end
+
   it 'isn\'t offend by using any attr_* methods in public scope' do
     inspect_source cop, <<-RUBY.strip_indent
         class SmallThing < Thing
