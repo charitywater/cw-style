@@ -21,13 +21,14 @@ module RuboCop
           return [] unless body
 
           private_nodes(body).select do |node|
-            %i(attr_reader attr_writer attr_accessor).include?(node.method_name)
+            node.send_type? && %i(attr_reader attr_writer attr_accessor).include?(node.method_name)
           end
         end
 
         def private_nodes(body)
-          index = body.child_nodes.index { |x| x.method_name == :private }
+          index = body.child_nodes.index { |x| x.send_type? && x.access_modifier? && x.method_name == :private }
           return [] unless index
+
           body.child_nodes[(index + 1)..-1]
         end
       end
