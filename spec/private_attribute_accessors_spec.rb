@@ -25,7 +25,7 @@ describe RuboCop::Cop::Style::PrivateAttributeAccessors do
       file = file.path
     end
 
-    RuboCop::ProcessedSource.new(source, 2.3, file)
+    RuboCop::ProcessedSource.new(source, 2.6, file)
   end
 
   def _investigate(cop, processed_source)

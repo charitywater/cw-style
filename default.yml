@@ -6,7 +6,7 @@ require:
   - ./lib/update_not_update_attributes
 
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.6
   Exclude:
     - '*.gemspec'
 
