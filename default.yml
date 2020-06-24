@@ -21,6 +21,36 @@ Layout/CaseIndentation:
 Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: False # disabled until autocorrectable in 0.87
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
 Metrics/AbcSize:
   Enabled: false
 
@@ -42,7 +72,7 @@ Metrics/ParameterLists:
 Metrics/PerceivedComplexity:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Rails:
@@ -63,9 +93,6 @@ Rails/TimeZone:
 
 RSpec/Focused:
   Enabled: true
-
-Style/BracesAroundHashParameters:
-  Enabled: false
 
 Style/Documentation:
   Enabled: false
