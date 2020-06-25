@@ -41,7 +41,7 @@ describe RuboCop::Cop::Style::PrivateAttributeAccessors do
   end
 
   it 'registers an offense for using any attr_* methods in private scope' do
-    inspect_source cop, <<-RUBY.strip_indent
+    inspect_source cop, <<~RUBY
         class SmallThing < Thing
         private
           attr_reader :anything
@@ -58,7 +58,7 @@ describe RuboCop::Cop::Style::PrivateAttributeAccessors do
   end
 
   it 'can handle non-access modifier node types' do
-    inspect_source cop, <<-RUBY.strip_indent
+    inspect_source cop, <<~RUBY
         class AwesomeController < RighteousController
           def create
             case variable_name
@@ -77,7 +77,7 @@ describe RuboCop::Cop::Style::PrivateAttributeAccessors do
   end
 
   it 'isn\'t offend by using any attr_* methods in public scope' do
-    inspect_source cop, <<-RUBY.strip_indent
+    inspect_source cop, <<~RUBY
         class SmallThing < Thing
           attr_reader :anything
           attr_writer :something
