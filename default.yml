@@ -100,10 +100,6 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/GuardClause:
-  Exclude:
-    - "spec/**/*"
-
 Style/MethodDefParentheses:
   Enabled: false
 
@@ -124,9 +120,6 @@ Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: 'comma'
 
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
-
-Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: 'comma'
 
 Layout/ArgumentAlignment:
