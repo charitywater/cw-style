@@ -128,3 +128,75 @@ Style/TrailingCommaInArrayLiteral:
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: 'comma'
+
+Layout/ArgumentAlignment:
+  Enabled: false
+
+Layout/BlockAlignment:
+  Enabled: false
+
+Layout/ClosingHeredocIndentation:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/FirstArgumentIndentation:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/HeredocIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Layout/ParameterAlignment:
+  Enabled: false
+
+Layout/SpaceBeforeComment:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/CommentedKeyword:
+  Enabled: false
+
+Style/EmptyElse:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/LineEndConcatenation:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/MultilineMemoization:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
