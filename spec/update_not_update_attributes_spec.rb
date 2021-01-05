@@ -27,25 +27,20 @@ describe RuboCop::Cop::Style::UpdateNotUpdateAttributes do
   end
 
   def _investigate(cop, processed_source)
-    forces = RuboCop::Cop::Force.all.each_with_object([]) do |klass, instances|
-      next unless cop.join_force?(klass)
-      instances << klass.new([cop])
-    end
-
-    commissioner =
-      RuboCop::Cop::Commissioner.new([cop], forces, raise_error: true)
-    commissioner.investigate(processed_source)
-    commissioner
+    team = RuboCop::Cop::Team.new([cop], nil, raise_error: true)
+    report = team.investigate(processed_source)
+    @last_corrector = report.correctors.first || RuboCop::Cop::Corrector.new(processed_source)
+    report.offenses
   end
 
-  def autocorrect_source(cop, source, file = nil)
+  def autocorrect_source(source, file = nil)
+    RuboCop::Formatter::DisabledConfigFormatter.config_to_allow_offenses = {}
+    RuboCop::Formatter::DisabledConfigFormatter.detected_styles = {}
     cop.instance_variable_get(:@options)[:auto_correct] = true
     processed_source = parse_source(source, file)
     _investigate(cop, processed_source)
 
-    corrector =
-      RuboCop::Cop::Corrector.new(processed_source.buffer, cop.corrections)
-    corrector.rewrite
+    @last_corrector.rewrite
   end
   # end helper methods
 
@@ -82,15 +77,15 @@ describe RuboCop::Cop::Style::UpdateNotUpdateAttributes do
   end
 
   context 'auto-corrects' do
+    let(:cop) { described_class.new }
+
     it 'update_attributes to update' do
-      cop = described_class.new
-      new_source = autocorrect_source(cop, 'user.update_attributes full_name: "joe"')
+      new_source = autocorrect_source('user.update_attributes full_name: "joe"')
       expect(new_source).to eq('user.update full_name: "joe"')
     end
 
     it 'update_attributes! to update!' do
-      cop = described_class.new
-      new_source = autocorrect_source(cop, 'user.update_attributes! full_name: "joe"')
+      new_source = autocorrect_source('user.update_attributes! full_name: "joe"')
       expect(new_source).to eq('user.update! full_name: "joe"')
     end
   end

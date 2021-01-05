@@ -27,15 +27,10 @@ describe RuboCop::Cop::Style::UnlessWithMultipleConditions do
   end
 
   def _investigate(cop, processed_source)
-    forces = RuboCop::Cop::Force.all.each_with_object([]) do |klass, instances|
-      next unless cop.join_force?(klass)
-      instances << klass.new([cop])
-    end
-
-    commissioner =
-      RuboCop::Cop::Commissioner.new([cop], forces, raise_error: true)
-    commissioner.investigate(processed_source)
-    commissioner
+    team = RuboCop::Cop::Team.new([cop], nil, raise_error: true)
+    report = team.investigate(processed_source)
+    @last_corrector = report.correctors.first || RuboCop::Cop::Corrector.new(processed_source)
+    report.offenses
   end
 
   it "isn't offended by single conditions, if statements with multiple conditions" do
