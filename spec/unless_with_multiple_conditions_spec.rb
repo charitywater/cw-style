@@ -17,7 +17,7 @@ describe RuboCop::Cop::Style::UnlessWithMultipleConditions do
   def parse_source(source, file = nil)
     source = source.join($RS) if source.is_a?(Array)
 
-    if file && file.respond_to?(:write)
+    if file&.respond_to?(:write)
       file.write(source)
       file.rewind
       file = file.path

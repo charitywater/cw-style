@@ -29,7 +29,7 @@ module RuboCop
           index = body.child_nodes.index { |x| x.send_type? && x.access_modifier? && x.method_name == :private }
           return [] unless index
 
-          body.child_nodes[(index + 1)..-1]
+          body.child_nodes[(index + 1)..]
         end
       end
     end
