@@ -19,7 +19,7 @@ module RuboCop
 
         def update_attributes_or_update_attributes_bang?(node)
           node.method?(:update_attributes) || node.method?(:update_attributes!)
-        end        
+        end
 
         def message(node)
           format(MSG, replacement_method(node))
