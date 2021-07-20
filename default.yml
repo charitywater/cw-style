@@ -1,7 +1,7 @@
 require:
-  - rubocop/rspec/focused
   - rubocop-thread_safety
   - rubocop-rails
+  - rubocop-rspec
   - ./lib/unless_with_multiple_conditions
   - ./lib/private_attribute_accessors
   - ./lib/update_not_update_attributes
@@ -91,9 +91,6 @@ Rails/Output:
 
 Rails/TimeZone:
   EnforcedStyle: 'flexible'
-
-RSpec/Focused:
-  Enabled: true
 
 Style/Documentation:
   Enabled: false
@@ -194,3 +191,9 @@ Style/TrailingCommaInHashLiteral:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+RSpec:
+  Enabled: false
+
+RSpec/Focus:
+  Enabled: true
