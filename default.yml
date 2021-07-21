@@ -2,7 +2,6 @@ require:
   - rubocop-thread_safety
   - rubocop-rails
   - rubocop-rspec
-  - ./lib/unless_with_multiple_conditions
   - ./lib/private_attribute_accessors
   - ./lib/update_not_update_attributes
 
@@ -54,6 +53,10 @@ Style/HashTransformValues:
 
 Style/SlicingWithRange:
   Enabled: true
+
+Style/UnlessLogicalOperators:
+  Enabled: true
+  EnforcedStyle: forbid_logical_operators
 
 Metrics/AbcSize:
   Enabled: false
