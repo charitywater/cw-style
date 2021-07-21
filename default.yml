@@ -147,6 +147,9 @@ Layout/HashAlignment:
 Layout/HeredocIndentation:
   Enabled: false
 
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false
+
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
