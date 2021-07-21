@@ -37,6 +37,9 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Lint/SymbolConversion:
+  Enabled: false
+
 Style/ExponentialNotation:
   Enabled: true
 
