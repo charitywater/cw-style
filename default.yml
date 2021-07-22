@@ -1,8 +1,7 @@
 require:
-  - rubocop/rspec/focused
   - rubocop-thread_safety
   - rubocop-rails
-  - ./lib/unless_with_multiple_conditions
+  - rubocop-rspec
   - ./lib/private_attribute_accessors
   - ./lib/update_not_update_attributes
 
@@ -37,6 +36,9 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Lint/SymbolConversion:
+  Enabled: false
+
 Style/ExponentialNotation:
   Enabled: true
 
@@ -51,6 +53,10 @@ Style/HashTransformValues:
 
 Style/SlicingWithRange:
   Enabled: true
+
+Style/UnlessLogicalOperators:
+  Enabled: true
+  EnforcedStyle: forbid_logical_operators
 
 Metrics/AbcSize:
   Enabled: false
@@ -91,9 +97,6 @@ Rails/Output:
 
 Rails/TimeZone:
   EnforcedStyle: 'flexible'
-
-RSpec/Focused:
-  Enabled: true
 
 Style/Documentation:
   Enabled: false
@@ -150,6 +153,9 @@ Layout/HashAlignment:
 Layout/HeredocIndentation:
   Enabled: false
 
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false
+
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
@@ -194,3 +200,12 @@ Style/TrailingCommaInHashLiteral:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+RSpec:
+  Enabled: false
+
+RSpec/Focus:
+  Enabled: true

@@ -1,5 +1,5 @@
 module CharityWater
   module Style
-    VERSION = '4.0.4'.freeze
+    VERSION = '4.1'.freeze
   end
 end
