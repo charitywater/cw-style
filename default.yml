@@ -30,6 +30,9 @@ Layout/SpaceAroundMethodCallOperator:
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
+Lint/EmptyBlock:
+  Enabled: false
+
 Lint/RaiseException:
   Enabled: true
 
