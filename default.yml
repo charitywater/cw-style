@@ -114,6 +114,9 @@ Style/FrozenStringLiteralComment:
 Style/MethodDefParentheses:
   Enabled: false
 
+Style/MixinUsage:
+  Enabled: false
+
 Style/PercentLiteralDelimiters:
   Enabled: false
 
