@@ -153,7 +153,13 @@ Layout/BlockAlignment:
 Layout/ClosingHeredocIndentation:
   Enabled: false
 
+Layout/ElseAlignment:
+  Enabled: false
+
 Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/EndAlignment:
   Enabled: false
 
 Layout/FirstArgumentIndentation:
@@ -171,6 +177,9 @@ Layout/HashAlignment:
 Layout/HeredocIndentation:
   Enabled: false
 
+Layout/IndentationWidth:
+  Enabled: false
+
 Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 
@@ -184,6 +193,9 @@ Layout/ParameterAlignment:
   Enabled: false
 
 Layout/SpaceBeforeComment:
+  Enabled: false
+
+Layout/TrailingWhitespace:
   Enabled: false
 
 Metrics/ModuleLength:
