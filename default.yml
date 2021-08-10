@@ -42,6 +42,10 @@ Lint/StructNewOverride:
 Lint/SymbolConversion:
   Enabled: false
 
+Lint/UselessMethodDefinition:
+  Exclude:
+    - "app/controllers/**/*"
+
 Style/ExponentialNotation:
   Enabled: true
 
