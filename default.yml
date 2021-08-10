@@ -27,6 +27,10 @@ Layout/EmptyLinesAroundAttributeAccessor:
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - "spec/**/*"
+
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
@@ -45,6 +49,10 @@ Lint/SymbolConversion:
 Lint/UselessMethodDefinition:
   Exclude:
     - "app/controllers/**/*"
+
+Style/CombinableLoops:
+  Exclude:
+    - "spec/**/*"
 
 Style/ExponentialNotation:
   Enabled: true
