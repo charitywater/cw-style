@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify dependencies in percy-style.gemspec
+# Specify dependencies in cw-style.gemspec
 gemspec

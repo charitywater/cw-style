@@ -1,3 +1,6 @@
+inherit_gem:
+  rubocop-config-prettier: config/rubocop.yml
+
 require:
   - rubocop-thread_safety
   - rubocop-rails
@@ -14,12 +17,6 @@ AllCops:
 Bundler/OrderedGems:
   Exclude:
     - "Gemfile"
-
-Layout/CaseIndentation:
-  Enabled: false
-
-Layout/MultilineMethodCallBraceLayout:
-  Enabled: false
 
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
@@ -122,92 +119,28 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/MethodDefParentheses:
-  Enabled: false
-
 Style/MixinUsage:
   Enabled: false
 
-Style/PercentLiteralDelimiters:
-  Enabled: false
-
-Style/RegexpLiteral:
-  Enabled: false
-
-Style/RescueModifier:
-  Exclude:
-    - "spec/**/*"
-
 Style/SignalException:
-  Enabled: false
-
-Style/TrailingCommaInArguments:
-  EnforcedStyleForMultiline: 'comma'
-
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
-
-Layout/ArgumentAlignment:
-  Enabled: false
-
-Layout/BlockAlignment:
   Enabled: false
 
 Layout/ClosingHeredocIndentation:
   Enabled: false
 
-Layout/ElseAlignment:
-  Enabled: false
-
 Layout/EmptyLineAfterGuardClause:
-  Enabled: false
-
-Layout/EndAlignment:
-  Enabled: false
-
-Layout/FirstArgumentIndentation:
-  Enabled: false
-
-Layout/FirstArrayElementIndentation:
-  Enabled: false
-
-Layout/FirstHashElementIndentation:
-  Enabled: false
-
-Layout/HashAlignment:
   Enabled: false
 
 Layout/HeredocIndentation:
   Enabled: false
 
-Layout/IndentationWidth:
-  Enabled: false
-
 Layout/LineEndStringConcatenationIndentation:
-  Enabled: false
-
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
-
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
-Layout/ParameterAlignment:
-  Enabled: false
-
-Layout/SpaceBeforeComment:
-  Enabled: false
-
-Layout/TrailingWhitespace:
   Enabled: false
 
 Metrics/ModuleLength:
   Enabled: false
 
 Naming/AccessorMethodName:
-  Enabled: false
-
-Style/BlockDelimiters:
   Enabled: false
 
 Style/CommentedKeyword:
@@ -226,12 +159,6 @@ Style/MultilineBlockChain:
   Enabled: false
 
 Style/MultilineMemoization:
-  Enabled: false
-
-Style/TrailingCommaInHashLiteral:
-  Enabled: false
-
-Style/IfUnlessModifier:
   Enabled: false
 
 Naming/VariableNumber:
