@@ -1,3 +1,6 @@
+inherit_gem:
+  rubocop-config-prettier: config/rubocop.yml
+
 require:
   - rubocop-thread_safety
   - rubocop-rails
@@ -15,20 +18,24 @@ Bundler/OrderedGems:
   Exclude:
     - "Gemfile"
 
-Layout/CaseIndentation:
-  Enabled: false
-
-Layout/MultilineMethodCallBraceLayout:
-  Enabled: false
-
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - "spec/**/*"
+
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
+
+Lint/DuplicateBranch:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Enabled: false
 
 Lint/RaiseException:
   Enabled: true
@@ -38,6 +45,14 @@ Lint/StructNewOverride:
 
 Lint/SymbolConversion:
   Enabled: false
+
+Lint/UselessMethodDefinition:
+  Exclude:
+    - "app/controllers/**/*"
+
+Style/CombinableLoops:
+  Exclude:
+    - "spec/**/*"
 
 Style/ExponentialNotation:
   Enabled: true
@@ -104,32 +119,10 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/MethodDefParentheses:
+Style/MixinUsage:
   Enabled: false
-
-Style/PercentLiteralDelimiters:
-  Enabled: false
-
-Style/RegexpLiteral:
-  Enabled: false
-
-Style/RescueModifier:
-  Exclude:
-    - "spec/**/*"
 
 Style/SignalException:
-  Enabled: false
-
-Style/TrailingCommaInArguments:
-  EnforcedStyleForMultiline: 'comma'
-
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
-
-Layout/ArgumentAlignment:
-  Enabled: false
-
-Layout/BlockAlignment:
   Enabled: false
 
 Layout/ClosingHeredocIndentation:
@@ -138,43 +131,16 @@ Layout/ClosingHeredocIndentation:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
-Layout/FirstArgumentIndentation:
-  Enabled: false
-
-Layout/FirstArrayElementIndentation:
-  Enabled: false
-
-Layout/FirstHashElementIndentation:
-  Enabled: false
-
-Layout/HashAlignment:
-  Enabled: false
-
 Layout/HeredocIndentation:
   Enabled: false
 
 Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
-
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
-Layout/ParameterAlignment:
-  Enabled: false
-
-Layout/SpaceBeforeComment:
-  Enabled: false
-
 Metrics/ModuleLength:
   Enabled: false
 
 Naming/AccessorMethodName:
-  Enabled: false
-
-Style/BlockDelimiters:
   Enabled: false
 
 Style/CommentedKeyword:
@@ -193,12 +159,6 @@ Style/MultilineBlockChain:
   Enabled: false
 
 Style/MultilineMemoization:
-  Enabled: false
-
-Style/TrailingCommaInHashLiteral:
-  Enabled: false
-
-Style/IfUnlessModifier:
   Enabled: false
 
 Naming/VariableNumber:
