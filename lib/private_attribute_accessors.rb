@@ -1,7 +1,7 @@
 module RuboCop
   module Cop
     module Style
-      class PrivateAttributeAccessors < ::RuboCop::Cop::Cop
+      class PrivateAttributeAccessors < ::RuboCop::Cop::Base
         MSG = 'Do not use private attribute accessors'.freeze
 
         def on_class(node)
