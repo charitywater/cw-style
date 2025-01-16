@@ -5,6 +5,8 @@ require:
   - rubocop-thread_safety
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-factory_bot
+  - rubocop-capybara
   - ./lib/private_attribute_accessors
 
 AllCops:
