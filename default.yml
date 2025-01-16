@@ -7,6 +7,7 @@ require:
   - rubocop-rspec
   - rubocop-factory_bot
   - rubocop-capybara
+  - rubocop-rspec_rails
   - ./lib/private_attribute_accessors
 
 AllCops:

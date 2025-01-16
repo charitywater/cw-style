@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rubocop-factory_bot"
   spec.add_dependency "rubocop-capybara"
   spec.add_dependency "rubocop-config-prettier"
+  spec.add_dependency "rubocop-rspec_rails"
   spec.add_development_dependency "bundler", "~> 2.6.2"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
