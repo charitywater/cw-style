@@ -6,7 +6,6 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - ./lib/private_attribute_accessors
-  - ./lib/update_not_update_attributes
 
 AllCops:
   NewCops: enable
